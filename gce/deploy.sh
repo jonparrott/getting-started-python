@@ -97,7 +97,7 @@ gcloud compute http-health-checks create ah-health-check \
 # Create a backend service, associate it with the health check and instance group.
 # The backend service serves as a target for load balancing.
 
-# [START create_backend-service]
+# [START create_backend_service]
 gcloud compute backend-services create $SERVICE \
   --http-health-check ah-health-check
 # [END create_backend-service]
