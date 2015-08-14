@@ -1,5 +1,5 @@
 # Copyright 2015 Google Inc.
-#
+#d
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -102,11 +102,11 @@ gcloud compute backend-services create $SERVICE \
   --http-health-check ah-health-check
 # [END create_backend-service]
 
-# [START add_backend-service]
+# [START add_backend_service]
 gcloud compute backend-services add-backend $SERVICE \
   --group $GROUP \
   --zone $ZONE
-# [END add_backend-service]
+# [END add_backend_service]
 
 # Create a URL map and web Proxy. The URL map will send all requests to the
 # backend service defined above.
