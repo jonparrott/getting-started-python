@@ -16,7 +16,7 @@ before_install:
   | ./google-cloud-sdk/install.sh && cd ${TRAVIS_BUILD_DIR}; fi
 - gcloud -q components update
 - gcloud -q components update app-engine-python
-- gcloud auth activate-service-account --key-file
+- gcloud auth activate-service-account --key-file silver-python2.json
 - gcloud config set project silver-python2
 - echo 'y' | ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
 - gcloud -q preview app deploy app.yaml --set-default --remote
