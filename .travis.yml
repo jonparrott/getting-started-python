@@ -19,6 +19,6 @@ before_install:
 - gcloud auth activate-service-account --key-file
 - gcloud config set project silver-python2
 - echo 'y' | ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
-- gcloud -q preview app deploy app.yaml --set-default
+- gcloud -q preview app deploy app.yaml --set-default --remote
 script:
 - tox
