@@ -18,9 +18,7 @@ before_install:
 - if [ -a silver-python2.json ]; then gcloud auth activate-service-account --key-file
   silver-python2.json; fi
 - gcloud config set project silver-python2
-- mkdir appengine-push/lib
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
-- pip install -t appengine-push/lib -r appengine-push/requirements.txt
 - gcloud -q preview app deploy app.yaml
 script:
 - tox
