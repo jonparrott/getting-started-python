@@ -14,6 +14,7 @@ before_install:
   https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz --directory-prefix=${HOME}/gcloud
   && cd ${HOME}/gcloud && tar xzf google-cloud-sdk.tar.gz && printf '\ny\n\ny\ny\n'
   | ./google-cloud-sdk/install.sh && cd ${TRAVIS_BUILD_DIR}; fi
+- gcloud -q components update
 - gcloud -q components update app-engine-python
 - if [ -a silver-python2.json ]; then gcloud auth activate-service-account --key-file
   silver-python2.json; fi
